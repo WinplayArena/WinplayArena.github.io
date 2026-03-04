@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINPLAY ARENA | Premium Futsal & Sports Rentals</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B2447',   // Deep Navy from the logo
+                        accent: '#F97316',    // Vibrant Orange from the logo
+                        accentHover: '#EA580C',// Slightly darker orange for hover states
+                        secondary: '#7DD3FC', // Icy light blue from the snowflake
+                        dark: '#051124',      // Darker navy for the footer
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for horizontal scrolling sections */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased relative">
+
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center">
+                <img src="WinPlay Arena Logo.png" alt="WinPlay Arena Logo" class="h-16 w-auto rounded-lg shadow-sm bg-white p-1">
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-white hover:text-accent font-medium transition">Home</a>
+                <a href="#stadiums" class="text-white hover:text-accent font-medium transition">Pitches</a>
+                <a href="#activities" class="text-white hover:text-accent font-medium transition">Activities</a>
+                <a href="#about" class="text-white hover:text-accent font-medium transition">About Us</a>
+                <a href="#booking" class="bg-accent hover:bg-accentHover text-white px-6 py-2 rounded-full font-semibold transition transform hover:scale-105 shadow-lg">Book Now</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-primary/95 backdrop-blur-md border-t border-slate-700 shadow-xl flex flex-col items-center py-6 space-y-4">
+            <a href="#home" class="text-white text-lg font-medium mobile-link">Home</a>
+            <a href="#stadiums" class="text-white text-lg font-medium mobile-link">Pitches</a>
+            <a href="#activities" class="text-white text-lg font-medium mobile-link">Activities</a>
+            <a href="#about" class="text-white text-lg font-medium mobile-link">About Us</a>
+            <a href="#booking" class="bg-accent text-white px-8 py-3 rounded-full font-semibold mobile-link">Book Now</a>
+        </div>
+    </header>
+
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?q=80&w=2000&auto=format&fit=crop" alt="Stadium background" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary/95"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                Book Elite Pitches.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary">Elevate Your Game.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Discover and reserve the region's premier dedicated spaces for futsal, basketball, volleyball, and more. Your next championship moment starts here.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#booking" class="bg-accent hover:bg-accentHover text-white px-8 py-4 rounded-full font-bold text-lg transition transform hover:-translate-y-1 shadow-[0_0_20px_rgba(249,115,22,0.4)]">
+                    Find a Pitch
+                </a>
+                <a href="#stadiums" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-4 rounded-full font-bold text-lg transition transform hover:-translate-y-1">
+                    Explore Venues
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="stadiums" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-primary mb-4">Our Premium Pitches</h2>
+                <p class="text-lg text-slate-600">Choose the perfect surface for your next match.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border-b-4 border-transparent hover:border-accent">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="stade soccer 1.png" alt="futsal Pitch" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">Pro Grade</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-primary mb-2">futsal Pitch</h3>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-users mr-1"></i> 5v5 Pitch</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-border-all mr-1"></i> Hardwood</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-parking mr-1"></i> Free Parking</span>
+                        </div>
+                        <button onclick="prefillBooking('Alpha Pitch')" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-primary font-semibold py-3 rounded-xl transition duration-300">
+                            View Details & Book
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border-b-4 border-transparent hover:border-accent">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="stade basket.png" alt="Omega Pitch" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-primary mb-2">Omega Turf</h3>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-users mr-1"></i> 5v5 Pitch</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-snowflake mr-1"></i> Climate Controlled</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-video mr-1"></i> Broadcast Ready</span>
+                        </div>
+                        <button onclick="prefillBooking('Omega Turf')" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-primary font-semibold py-3 rounded-xl transition duration-300">
+                            View Details & Book
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border-b-4 border-transparent hover:border-accent">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="stade soccer grass.png" alt="Training Court" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-primary mb-2">The Training Court</h3>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-users mr-1"></i> 6v6 pitch</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-leaf mr-1"></i> Natural Grass</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded"><i class="fas fa-video mr-1"></i> Playback Cams</span>
+                        </div>
+                        <button onclick="prefillBooking('The Training Court')" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-primary font-semibold py-3 rounded-xl transition duration-300">
+                            View Details & Book
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-bold mb-4">What's Your Game?</h2>
+                <p class="text-slate-300 text-lg">Facilities optimized for peak performance across every sport.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-slate-800/50 p-8 rounded-2xl text-center hover:bg-slate-700 transition cursor-pointer border border-slate-700 hover:border-accent group">
+                    <i class="fas fa-futbol text-4xl text-accent mb-4 group-hover:scale-110 transition"></i>
+                    <h4 class="text-xl font-semibold">Futsal & Soccer</h4>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-2xl text-center hover:bg-slate-700 transition cursor-pointer border border-slate-700 hover:border-accent group">
+                    <i class="fas fa-basketball-ball text-4xl text-accent mb-4 group-hover:scale-110 transition"></i>
+                    <h4 class="text-xl font-semibold">Basketball</h4>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-2xl text-center hover:bg-slate-700 transition cursor-pointer border border-slate-700 hover:border-accent group">
+                    <i class="fas fa-volleyball-ball text-4xl text-accent mb-4 group-hover:scale-110 transition"></i>
+                    <h4 class="text-xl font-semibold">Volleyball</h4>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-2xl text-center hover:bg-slate-700 transition cursor-pointer border border-slate-700 hover:border-accent group">
+                    <i class="fas fa-table-tennis text-4xl text-accent mb-4 group-hover:scale-110 transition"></i>
+                    <h4 class="text-xl font-semibold">Tennis / Padel</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-24 bg-slate-50 relative -mt-10 z-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-t-4 border-accent">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-primary mb-2">Check Availability & Book</h2>
+                    <p class="text-slate-500">Secure your pitch in seconds. No account required to check.</p>
+                </div>
+
+                <form id="booking-form" class="grid grid-cols-1 md:grid-cols-5 gap-6 items-end">
+                    
+                    <div class="md:col-span-1">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Select Pitch</label>
+                        <div class="relative">
+                            <select id="stadium-select" class="w-full appearance-none bg-slate-50 border border-slate-200 text-slate-700 py-3 px-4 pr-8 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent cursor-pointer">
+                                <option value="" disabled selected>Choose a pitch...</option>
+                                <option value="Alpha Pitch">Alpha Pitch (5v5)</option>
+                                <option value="Omega Turf">Omega Turf (7v7)</option>
+                                <option value="The Training Court">The Training Court</option>
+                            </select>
+                            <i class="fas fa-chevron-down absolute right-4 top-4 text-slate-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-1">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Select Activity</label>
+                        <div class="relative">
+                            <select id="activity-select" class="w-full appearance-none bg-slate-50 border border-slate-200 text-slate-700 py-3 px-4 pr-8 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent cursor-pointer">
+                                <option value="" disabled selected>What's the sport?</option>
+                                <option value="Futsal">Futsal</option>
+                                <option value="Basketball">Basketball</option>
+                                <option value="Volleyball">Volleyball</option>
+                                <option value="Tennis">Tennis</option>
+                            </select>
+                            <i class="fas fa-chevron-down absolute right-4 top-4 text-slate-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-1">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Date & Time</label>
+                        <input type="datetime-local" id="date-select" class="w-full bg-slate-50 border border-slate-200 text-slate-700 py-3 px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent cursor-pointer">
+                    </div>
+
+                    <div class="md:col-span-1">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Duration (Hours)</label>
+                        <div class="flex items-center bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+                            <button type="button" onclick="adjustDuration(-1)" class="px-4 py-3 text-slate-500 hover:bg-slate-200 hover:text-primary transition font-bold">-</button>
+                            <input type="number" id="duration-select" value="2" min="1" max="12" class="w-full bg-transparent text-center font-semibold text-slate-700 focus:outline-none" readonly>
+                            <button type="button" onclick="adjustDuration(1)" class="px-4 py-3 text-slate-500 hover:bg-slate-200 hover:text-primary transition font-bold">+</button>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-1">
+                        <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white font-bold py-3 px-4 rounded-xl transition shadow-[0_4px_14px_0_rgba(249,115,22,0.39)] hover:shadow-[0_6px_20px_rgba(249,115,22,0.23)] hover:-translate-y-0.5">
+                            Search Slots
+                        </button>
+                    </div>
+                </form>
+
+                <div id="booking-msg" class="mt-8 transition-all duration-300"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-display font-bold text-center text-primary mb-12">Moments from the Pitch</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+                <div class="relative bg-slate-200 rounded-2xl h-64 flex items-center justify-center overflow-hidden group cursor-pointer border border-slate-100">
+                    <img src="Soccer.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition duration-300"></div>
+                    <i class="fas fa-play-circle text-6xl text-white/80 z-10 group-hover:text-white group-hover:scale-110 transition"></i>
+                    <div class="absolute bottom-4 left-4 z-10">
+                        <p class="text-white font-semibold">Highlights: Friday Night Futsal</p>
+                    </div>
+                </div>
+                <div class="relative bg-slate-200 rounded-2xl h-64 flex items-center justify-center overflow-hidden group cursor-pointer hidden md:flex border border-slate-100">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition duration-300"></div>
+                    <i class="fas fa-play-circle text-6xl text-white/80 z-10 group-hover:text-white group-hover:scale-110 transition"></i>
+                    <div class="absolute bottom-4 left-4 z-10">
+                        <p class="text-white font-semibold">Corporate Tournament Finals</p>
+                    </div>
+                </div>
+                <div class="relative bg-slate-200 rounded-2xl h-64 flex items-center justify-center overflow-hidden group cursor-pointer hidden lg:flex border border-slate-100">
+                    <img src="basket2.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition duration-300"></div>
+                    <i class="fas fa-play-circle text-6xl text-white/80 z-10 group-hover:text-white group-hover:scale-110 transition"></i>
+                    <div class="absolute bottom-4 left-4 z-10">
+                        <p class="text-white font-semibold">Local League Matchups</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-100">
+                <div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory space-x-6 pb-4">
+                    <div class="min-w-full md:min-w-[400px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div class="flex text-accent mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-slate-600 mb-6 italic">"The booking process is incredibly smooth, and the pitches are top-tier. Our 5v5 league refuses to play anywhere else now."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-slate-200 rounded-full mr-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                            <div>
+                                <h4 class="font-bold text-primary">Marcus T.</h4>
+                                <p class="text-sm text-slate-500">League Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="min-w-full md:min-w-[400px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div class="flex text-accent mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-slate-600 mb-6 italic">"Having access to clean, professional-grade hardwood courts makes running our youth camps a breeze."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-slate-200 rounded-full mr-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                            <div>
+                                <h4 class="font-bold text-primary">Sarah J.</h4>
+                                <p class="text-sm text-slate-500">Head Coach, Elite Hoops</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-primary text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-display font-bold mb-6">Built for the Players</h2>
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        At WINPLAY ARENA, we believe that the environment shapes the athlete. We were founded on a simple mission: to provide professional-grade futsal and multi-sport pitches for everyday players. No massive grandstands, just premium surfaces built for performance.
+                    </p>
+                    <ul class="space-y-4 mt-8">
+                        <li class="flex items-center text-slate-200"><i class="fas fa-check-circle text-secondary mr-3"></i> Pro-grade turf and hardwood surfaces</li>
+                        <li class="flex items-center text-slate-200"><i class="fas fa-check-circle text-secondary mr-3"></i> High-visibility LED sports lighting</li>
+                        <li class="flex items-center text-slate-200"><i class="fas fa-check-circle text-secondary mr-3"></i> Premium locker rooms & equipment rental</li>
+                        <li class="flex items-center text-slate-200"><i class="fas fa-check-circle text-secondary mr-3"></i> Post-game Café & Recovery Lounge</li>
+                        <li class="flex items-center text-slate-200"><i class="fas fa-check-circle text-secondary mr-3"></i> Frictionless digital booking system</li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-accent/20 rounded-3xl transform rotate-3 z-0"></div>
+                    <!-- <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=800&auto=format&fit=crop" alt="Indoor pitch setup" class="relative z-10 rounded-2xl shadow-2xl object-cover h-[500px] w-full border-4 border-slate-800"> -->
+                    <img src="Soccer.png" alt="Indoor pitch setup" class="relative z-10 rounded-2xl shadow-2xl object-cover h-[500px] w-full border-4 border-slate-800">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <img src="WinPlay Arena Logo.png" alt="WinPlay Arena" class="h-10 w-auto mb-4 mx-auto md:mx-0 opacity-75 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-sm">© 2026 WinPlay Arena. All rights reserved.</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="hover:text-secondary transition text-sm">Privacy Policy</a>
+                    <a href="#" class="hover:text-secondary transition text-sm">Terms of Service</a>
+                    <a href="#" class="hover:text-secondary transition text-sm">Support</a>
+                </div>
+
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-accent text-white w-12 h-12 rounded-full shadow-[0_4px_14px_0_rgba(249,115,22,0.39)] flex items-center justify-center opacity-0 transition-all duration-300 pointer-events-none z-50 hover:bg-accentHover hover:-translate-y-1">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 1. Navbar Scroll Effect & Back to Top Button
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('bg-primary/95', 'backdrop-blur-md', 'py-2', 'shadow-lg');
+                
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                backToTop.classList.add('opacity-100', 'pointer-events-auto');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-primary/95', 'backdrop-blur-md', 'py-2', 'shadow-lg');
+                
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+                backToTop.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 2. Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 3. Duration Input Adjuster
+        function adjustDuration(amount) {
+            const input = document.getElementById('duration-select');
+            let val = parseInt(input.value);
+            val += amount;
+            if(val >= 1 && val <= 12) {
+                input.value = val;
+            }
+        }
+
+        // 4. Pre-fill Booking from Pitch Cards
+        window.prefillBooking = function(stadiumName) {
+            const select = document.getElementById('stadium-select');
+            select.value = stadiumName;
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+            
+            // Flash effect for the form
+            const formContainer = document.querySelector('#booking .bg-white');
+            formContainer.classList.add('ring-4', 'ring-accent', 'ring-opacity-50');
+            setTimeout(() => {
+                formContainer.classList.remove('ring-4', 'ring-accent', 'ring-opacity-50');
+            }, 1000);
+        };
+
+        // 5. Mock Booking Logic & Validation
+        const bookingForm = document.getElementById('booking-form');
+        const msgContainer = document.getElementById('booking-msg');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const stadium = document.getElementById('stadium-select').value;
+            const activity = document.getElementById('activity-select').value;
+            const dateStr = document.getElementById('date-select').value;
+            const duration = document.getElementById('duration-select').value;
+
+            msgContainer.innerHTML = '';
+            msgContainer.classList.remove('opacity-0');
+
+            if (!stadium || !activity || !dateStr) {
+                showError('Please fill out all fields to check availability.');
+                return;
+            }
+
+            const selectedDate = new Date(dateStr);
+            const now = new Date();
+
+            if (selectedDate <= now) {
+                showError('Please select a future date and time for your booking.');
+                return;
+            }
+
+            const dayOfWeek = selectedDate.getDay();
+            const isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
+            
+            const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const formattedDate = selectedDate.toLocaleDateString('en-US', options);
+
+            msgContainer.innerHTML = `
+                <div class="p-6 rounded-xl border-l-4 ${isWeekend ? 'bg-amber-50 border-amber-500' : 'bg-emerald-50 border-emerald-500'} animate-fade-in">
+                    <h4 class="font-bold text-slate-800 mb-2">Search Results:</h4>
+                    <p class="text-slate-600 mb-3">
+                        Requested: <strong>${stadium}</strong> for <strong>${activity}</strong><br>
+                        Time: <strong>${formattedDate}</strong> (${duration} Hours)
+                    </p>
+                    <div class="flex items-center">
+                        ${isWeekend 
+                            ? `<i class="fas fa-exclamation-triangle text-amber-500 mr-2"></i> <span class="font-bold text-amber-700">Limited availability. Only 2 slots remain for this weekend.</span>`
+                            : `<i class="fas fa-check-circle text-emerald-500 mr-2"></i> <span class="font-bold text-emerald-700">Available! Proceed to secure your slot.</span>`
+                        }
+                    </div>
+                    <button class="mt-4 bg-primary text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-slate-800 transition">
+                        ${isWeekend ? 'Claim Slot Now' : 'Proceed to Checkout'}
+                    </button>
+                </div>
+            `;
+        });
+
+        function showError(msg) {
+            msgContainer.innerHTML = `
+                <div class="p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded-r-xl">
+                    <i class="fas fa-info-circle mr-2"></i> ${msg}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
